@@ -11,7 +11,7 @@ pub mut:
 	root_path              string             [json: rootPath]
 	initialization_options string             [skip; json: initializationOptions]
 	capabilities           ClientCapabilities [skip]
-	trace                  string
+	trace                  string = 'off'
 	workspace_folders      []WorkspaceFolder  [skip]
 }
 

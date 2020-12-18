@@ -6,6 +6,7 @@ import jsonrpc
 
 // initialize sends the server capabilities to the client
 fn (mut ls Vls) initialize(id int, params string) {
+	// TODO: disobey trace settings for now. only log JSON by default
 	initialize_params := json.decode(lsp.InitializeParams, params) or { panic(err) }
 	mut capabilities := lsp.ServerCapabilities{
 		text_document_sync: 1
